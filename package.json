@@ -2,21 +2,24 @@
   "name": "grunt-harp",
   "description": "A grunt task for either running a Harp server, or compile your site using harp.",
   "version": "0.18.1",
-  "homepage": "https://github.com/shovon/grunt-harp",
+  "homepage": "https://github.com/joelvaneenwyk/grunt-harp",
   "author": {
     "name": "Salehen Shovon Rahman",
     "email": "sal@linux.com",
     "url": "http://shovon.github.io"
   },
-  "contributors": [{
-    "name": "Dave Furfero",
-    "email": "furf@furf.com",
-    "url": "http://furf@furf.com"
-  },{
-    "name": "Joel Van Eenwyk",
-    "email": "joel.vaneenwyk@gmail.com",
-    "url": "http://joelvaneenwyk.com"
-  }],
+  "contributors": [
+    {
+      "name": "Dave Furfero",
+      "email": "furf@furf.com",
+      "url": "http://furf@furf.com"
+    },
+    {
+      "name": "Joel Van Eenwyk",
+      "email": "joel.vaneenwyk@gmail.com",
+      "url": "http://joelvaneenwyk.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/joelvaneenwyk/grunt-harp.git"
@@ -39,17 +42,20 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.11.0",
-    "grunt-contrib-clean": "~1.0.0",
-    "grunt-contrib-nodeunit": "~1.0.0",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0"
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0"
   },
   "peerDependencies": {
     "grunt": "^1.0.1"
   },
   "keywords": [
-    "harp", "grunt", "gruntplugin", "plugin"
+    "harp",
+    "grunt",
+    "gruntplugin",
+    "plugin"
   ],
   "dependencies": {
     "harp": "^0.25.0"
