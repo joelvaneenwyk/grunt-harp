@@ -1,7 +1,7 @@
 {
   "name": "grunt-harp",
   "description": "A grunt task for either running a Harp server, or compile your site using harp.",
-  "version": "0.18.1",
+  "version": "0.18.2",
   "homepage": "https://github.com/joelvaneenwyk/grunt-harp",
   "author": {
     "name": "Salehen Shovon Rahman",
@@ -35,21 +35,21 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": "8.9.4",
-    "npm": "5.6.0"
+    "node": "10.15.0",
+    "npm": "6.7.0"
   },
   "scripts": {
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-jshint": "^1.1.0",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0"
   },
   "peerDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.3"
   },
   "keywords": [
     "harp",
@@ -58,6 +58,6 @@
     "plugin"
   ],
   "dependencies": {
-    "harp": "^0.25.0"
+    "harp": "^0.28.1"
   }
 }
