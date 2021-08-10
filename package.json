@@ -34,7 +34,7 @@
         }
     ],
     "type": "commonjs",
-    "main": "tasks/grunt-harp.js",
+    "main": "Gruntfile.js",
     "engines": {
         "yarn": ">=2.0.0",
         "node": ">=10.15.0",
