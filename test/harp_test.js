@@ -1,37 +1,27 @@
-'use strict';
-
-var grunt = require('grunt');
-
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
-
-// TODO: write some tests.
+const grunt = require("grunt");
 
 exports.harp = {
-  setUp: function(done) {
-    // setup here if necessary
-    done();
-  },
-  //some_test: function (test) {
-  //  // ... run your test here.
-  //  // test.done();
-  //}
-  // Add more tests here when necessary.
+    setUp(done) {
+        // setup here if necessary
+        done();
+    },
+    some_test(test) {
+        // ... run your test here.
+        // Actually load this plugin's task(s).
+        grunt.loadTasks("tasks");
+
+        // These plugins provide necessary tasks.
+        grunt.loadNpmTasks("grunt-eslint");
+        grunt.loadNpmTasks("grunt-contrib-clean");
+        grunt.loadNpmTasks("grunt-contrib-nodeunit");
+
+        // Whenever the "test" task is run, first clean the "tmp" dir, then run this
+        // plugin's task(s), then test the result.
+        grunt.registerTask("test", ["clean", "harp", "nodeunit"]);
+
+        // By default, lint and run all tests.
+        grunt.registerTask("default", ["eslint", "test"]);
+
+        test.done();
+    }
 };

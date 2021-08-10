@@ -1,5 +1,9 @@
 node_modules
+
+.pnp.cjs
 .yarn/cache
+.yarn/unplugged
 .yarn/install-state.gz
+
 npm-debug.log
 tmp

@@ -1,0 +1,22 @@
+{
+    "search.exclude": {
+        "**/.yarn": true,
+        "**/.pnp.*": true
+    },
+    "eslint.format.enable": true,
+    "eslint.nodePath": ".yarn/sdks",
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "cSpell.words": [
+        "assign",
+        "cond",
+        "gruntfile",
+        "no",
+        "nodeunit",
+        "rahman",
+        "readonly",
+        "salehen",
+        "shovon"
+    ]
+}
