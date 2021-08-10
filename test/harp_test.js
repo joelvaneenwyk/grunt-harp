@@ -7,9 +7,9 @@ exports.harp = {
         done();
     },
     test_compile_harp(test) {
-        task = gruntHarp(grunt);
+        const task = gruntHarp(grunt);
         test.notEqual(task, null);
-        test.equal('function', typeof task.registerTask);
+        test.equal("function", typeof task.registerTask);
         test.done();
     }
 };

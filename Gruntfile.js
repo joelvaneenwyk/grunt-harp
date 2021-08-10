@@ -23,9 +23,10 @@ module.exports = function (grunt) {
         },
 
         // Before generating any new files, remove any previously-created files.
-        clean: {
-            tests: ["tmp"]
-        },
+        clean: [
+            "tmp",
+            "build"
+        ],
 
         // Configuration to be run (and then tested).
         harp: {
@@ -45,15 +46,14 @@ module.exports = function (grunt) {
     gruntHarp(grunt);
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks("harp");
     grunt.loadNpmTasks("grunt-eslint");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-nodeunit");
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask("test", ["clean", "harp", "nodeunit"]);
+    grunt.registerTask("test", ["eslint", "clean", "harp", "nodeunit"]);
 
     // By default, lint and run all tests.
-    grunt.registerTask("default", ["eslint", "test"]);
+    grunt.registerTask("default", ["clean", "harp", "eslint", "test"]);
 };

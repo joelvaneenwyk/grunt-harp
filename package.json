@@ -41,7 +41,8 @@
         "npm": ">=6.7.0"
     },
     "scripts": {
-        "test": "grunt test --verbose"
+        "test": "grunt test --verbose",
+        "build": "grunt --verbose"
     },
     "keywords": [
         "harp",
