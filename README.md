@@ -64,7 +64,7 @@ The directory of which to get the source files from.
 
 #### options.dest
 
-Type: `String`    
+Type: `String`
 Default value: `build`
 
 The directory of which to store the generated site.
@@ -103,4 +103,4 @@ grunt.initConfig({
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
