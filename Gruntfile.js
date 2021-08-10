@@ -6,14 +6,19 @@
  * Licensed under the MIT license.
  */
 
+const gruntHarp = require("./tasks/grunt-harp");
+
 module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         eslint: {
-            all: [
+            options: {
+                configFile: ".eslintrc.json"
+            },
+            target: [
                 "Gruntfile.js",
                 "tasks/*.js",
-                "<%= nodeunit.tests %>"
+                "test/*.js"
             ]
         },
 
@@ -23,7 +28,12 @@ module.exports = function (grunt) {
         },
 
         // Configuration to be run (and then tested).
-        harp: {},
+        harp: {
+            options: {
+                source: "./test/example-site",
+                dest: "build"
+            }
+        },
 
         // Unit tests.
         nodeunit: {
@@ -32,10 +42,10 @@ module.exports = function (grunt) {
 
     });
 
-    // Actually load this plugin's task(s).
-    grunt.loadTasks("tasks");
+    gruntHarp(grunt);
 
     // These plugins provide necessary tasks.
+    grunt.loadNpmTasks("harp");
     grunt.loadNpmTasks("grunt-eslint");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-nodeunit");

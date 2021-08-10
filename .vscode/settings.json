@@ -6,7 +6,7 @@
     "eslint.format.enable": true,
     "eslint.nodePath": ".yarn/sdks",
     "files.associations": {
-        "*.json": "jsonc"
+        ".eslintrc.json": "jsonc"
     },
     "cSpell.words": [
         "assign",

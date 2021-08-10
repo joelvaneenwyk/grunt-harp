@@ -10,7 +10,7 @@ const harp = require("harp");
 const path = require("path");
 
 module.exports = function (grunt) {
-    grunt.registerTask(
+    return grunt.registerTask(
         "harp",
         "A grunt task for either running a Harp server, or compile your site using harp.",
         function () {
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             } else {
                 harp.compile(source, dest, function (err) {
                     if (err) {
-                        grunt.fail.fatal(err.message);
+                        grunt.fail.fatal(err);
                     }
                     grunt.log.writeln("Site successfully compiled!");
                     done();
