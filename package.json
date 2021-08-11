@@ -33,29 +33,18 @@
             "url": "https://github.com/joelvaneenwyk/grunt-harp/blob/main/LICENSE-MIT"
         }
     ],
-    "type": "commonjs",
-    "main": "Gruntfile.js",
+    "main": "tasks/harp.js",
     "engines": {
-        "yarn": ">=2.0.0",
-        "node": ">=10.15.0",
-        "npm": ">=6.7.0"
+        "node": ">=10"
     },
     "scripts": {
         "test": "grunt test --verbose",
         "build": "grunt --verbose"
     },
     "files": [
-        ".gitignore",
-        ".editorconfig",
-        ".eslintrc.json",
-        "Gruntfile.js",
         "LICENSE",
-        "package.json",
-        "package-lock.json",
         "README.md",
-        "tasks/grunt-harp.js",
-        "test/harp_test.js",
-        "test/example-site/index.jade"
+        "tasks"
     ],
     "keywords": [
         "harp",
@@ -66,8 +55,6 @@
     "dependencies": {
         "@typescript-eslint/eslint-plugin": "^4.29.1",
         "@typescript-eslint/parser": "^4.29.1",
-        "@yarnpkg/pnpify": "^3.0.1-rc.1",
-        "@yarnpkg/sdks": "^2.4.1-rc.4",
         "coffeescript": "^2.5.1",
         "eslint": "^7.32.0",
         "eslint-config-airbnb-base": "^14.2.1",
@@ -81,14 +68,5 @@
         "grunt-eslint": "^23.0.0",
         "harp": "^0.41.0",
         "typescript": "^4.3.5"
-    },
-    "packageManager": "yarn@3.0.1-rc.2",
-    "dependenciesMeta": {
-        "crypto@1.0.1": {
-            "unplugged": true
-        },
-        "harp@0.41.0": {
-            "unplugged": true
-        }
     }
 }

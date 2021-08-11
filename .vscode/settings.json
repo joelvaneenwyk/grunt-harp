@@ -9,11 +9,15 @@
         ".eslintrc.json": "jsonc"
     },
     "cSpell.words": [
+        "action",
         "assign",
         "cond",
         "gruntfile",
         "no",
         "nodeunit",
+        "npm",
+        "pascalgn",
+        "publish",
         "rahman",
         "readonly",
         "salehen",

@@ -16,27 +16,46 @@ module.exports = function (grunt) {
         function () {
             // Merge task-specific and/or target-specific options with these defaults.
             const done = this.async();
+
             const defaults = {
                 server: false,
                 port: 9000,
                 source: "./",
                 dest: "build"
             };
+
             const options = this.options(defaults, this.data);
             const source = path.resolve(options.source);
             const dest = path.resolve(options.dest);
+
             if (options.server) {
                 harp.server(source, { port: options.port }, function () {
                     console.log("Harp server running on port %d", options.port);
                 });
+                done();
             } else {
-                harp.compile(source, dest, function (err) {
-                    if (err) {
-                        grunt.fail.fatal(err);
-                    }
-                    grunt.log.writeln("Site successfully compiled!");
+                grunt.log.writeln("Initiated 'harp' site compile.");
+
+                try {
+                    harp.compile(source, dest, function (err) {
+                        if (err) {
+                            grunt.fail.fatal(err);
+                            done(err);
+                        }
+
+                        grunt.log.writeln("Site successfully compiled!");
+
+                        done();
+                    });
+
+                    setTimeout(function () {
+                        grunt.log.writeln("All done!");
+                        done();
+                    }, 1000);
+                } catch (error) {
                     done();
-                });
+                    grunt.log.writeln("Failed to compile site.");
+                }
             }
         }
     );

@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-const gruntHarp = require("./tasks/grunt-harp");
+const gruntHarp = require("./tasks/harp");
 
 module.exports = function (grunt) {
     // Project configuration.

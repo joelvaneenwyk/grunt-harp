@@ -1,5 +1,5 @@
 const grunt = require("grunt");
-const gruntHarp = require("../tasks/grunt-harp");
+const gruntHarp = require("../tasks/harp");
 
 exports.harp = {
     setUp(done) {
