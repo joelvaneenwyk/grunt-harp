@@ -1,24 +1,12 @@
 {
-    "name": "grunt-harp",
+    "name": "@jvaneenwyk/grunt-harp",
     "description": "A grunt task for either running a Harp server, or compile your site using harp.",
     "version": "0.23.0",
     "homepage": "https://github.com/joelvaneenwyk/grunt-harp",
-    "author": {
-        "name": "Salehen Shovon Rahman",
-        "email": "sal@linux.com",
-        "url": "http://shovon.github.io"
-    },
+    "author": "Salehen Shovon Rahman <sal@linux.com> (http://shovon.github.io)",
     "contributors": [
-        {
-            "name": "Dave Furfero",
-            "email": "furf@furf.com",
-            "url": "http://furf@furf.com"
-        },
-        {
-            "name": "Joel Van Eenwyk",
-            "email": "joel.vaneenwyk@gmail.com",
-            "url": "http://joelvaneenwyk.com"
-        }
+        "Joel Van Eenwyk <joel.vaneenwyk@gmail.com> (http://joelvaneenwyk.com)",
+        "Dave Furfero <furf@furf.com> (http://furf@furf.com)"
     ],
     "repository": {
         "type": "git",
@@ -40,6 +28,9 @@
     "scripts": {
         "test": "grunt test --verbose",
         "build": "grunt --verbose"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "files": [
         "LICENSE",
@@ -68,5 +59,12 @@
         "grunt-eslint": "^23.0.0",
         "harp": "^0.41.0",
         "typescript": "^4.3.5"
-    }
+    },
+    "directories": {
+        "test": "test"
+    },
+    "devDependencies": {
+        "tap": "^15.0.9"
+    },
+    "license": "ISC"
 }

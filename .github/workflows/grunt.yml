@@ -8,21 +8,32 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node: [14, 16]
+        node:
+          - 14
+        platform:
+          - ubuntu-20.04
+          - macos-10.15
+          - windows-2019
+
+    runs-on: ${{ matrix.platform }}
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
-    - name: Use Node.js ${{ matrix.node }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node }}
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
 
-    - name: Build
-      run: |
-        npm install
-        grunt
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Build
+        run: |
+          npm install
+          grunt
