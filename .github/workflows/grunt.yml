@@ -34,7 +34,8 @@ jobs:
         run: npm install -g yarn
 
       - name: Install Grunt
-        run: npm install -g grunt
+        # Force as it fails on Windows given that it's already installed
+        run: npm install -g grunt --force
 
       - name: NPM Install
         run: |
