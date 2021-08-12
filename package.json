@@ -40,7 +40,7 @@
     "keywords": [
         "harp",
         "grunt",
-        "gruntplugin",
+        "grunt-plugin",
         "plugin"
     ],
     "dependencies": {

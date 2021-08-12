@@ -31,6 +31,7 @@
             "error",
             4
         ],
+        "linebreak-style": "off",
         "func-names": "off",
         "max-len": [
             "error",

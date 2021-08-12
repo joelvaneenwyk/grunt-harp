@@ -6,15 +6,18 @@
     "eslint.format.enable": true,
     "eslint.nodePath": ".yarn/sdks",
     "files.associations": {
-        ".eslintrc.json": "jsonc"
+        ".eslintrc.json": "jsonc",
+        "*.json.git": "jsonc"
     },
     "cSpell.words": [
         "action",
         "assign",
         "cond",
+        "furfero",
         "gruntfile",
         "joelvaneenwyk",
         "jvaneenwyk",
+        "linebreak",
         "no",
         "nodeunit",
         "npm",
