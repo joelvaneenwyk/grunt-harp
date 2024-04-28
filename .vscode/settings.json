@@ -1,13 +1,12 @@
 {
-    "search.exclude": {
-        "**/.yarn": true,
-        "**/.pnp.*": true
-    },
-    "eslint.format.enable": true,
-    "eslint.nodePath": ".yarn/sdks",
-    "files.associations": {
-        ".eslintrc.json": "jsonc",
-        "*.json.git": "jsonc"
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.fixAll.eslint": "explicit",
+            "source.organizeImports": "always"
+        },
+        "editor.formatOnSave": true,
+        "editor.maxTokenizationLineLength": 2500
     },
     "cSpell.words": [
         "action",
@@ -28,5 +27,16 @@
         "salehen",
         "shovon",
         "submodules"
-    ]
+    ],
+    "eslint.experimental.useFlatConfig": true,
+    "eslint.format.enable": true,
+    "eslint.nodePath": ".yarn/sdks",
+    "files.associations": {
+        "*.json.git": "jsonc",
+        ".eslintrc.json": "jsonc"
+    },
+    "search.exclude": {
+        "**/.pnp.*": true,
+        "**/.yarn": true
+    }
 }
