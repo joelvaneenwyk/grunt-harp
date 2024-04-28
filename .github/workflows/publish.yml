@@ -44,13 +44,7 @@ jobs:
           registry: "https://npm.pkg.github.com"
           token: ${{ github.token }}
 
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          access: public
-          registry: "https://npm.pkg.github.com"
-          token: ${{ secrets.NPM_TOKEN }}
-
-      - name: Archive npm failure logs
+      - name: Upload Logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
