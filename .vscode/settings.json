@@ -38,5 +38,10 @@
     "search.exclude": {
         "**/.pnp.*": true,
         "**/.yarn": true
-    }
+    },
+    "cSpell.enableFiletypes": [
+        "dockerfile",
+        "ejs",
+        "env"
+    ]
 }
