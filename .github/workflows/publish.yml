@@ -40,13 +40,11 @@ jobs:
 
       - uses: JS-DevTools/npm-publish@v3
         with:
-          token: ${{ github.token }}
+          access: public
           registry: "https://npm.pkg.github.com"
+          token: ${{ github.token }}
 
       - uses: JS-DevTools/npm-publish@v3
         with:
+          access: public
           token: ${{ secrets.NPM_TOKEN }}
-
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
