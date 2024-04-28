@@ -4,10 +4,15 @@
     "version": "0.23.0",
     "homepage": "https://github.com/joelvaneenwyk/grunt-harp",
     "author": "Salehen Shovon Rahman <sal@linux.com> (http://shovon.github.io)",
+    "type": "commonjs",
     "contributors": [
         "Joel Van Eenwyk <joel.vaneenwyk@gmail.com> (http://joelvaneenwyk.com)",
         "Dave Furfero <furf@furf.com> (http://furf@furf.com)"
     ],
+    "engines": {
+        "node": ">=14"
+    },
+    "main": "tasks/harp.js",
     "repository": {
         "type": "git",
         "url": "git://github.com/joelvaneenwyk/grunt-harp.git"
@@ -15,19 +20,17 @@
     "bugs": {
         "url": "https://github.com/joelvaneenwyk/grunt-harp/issues"
     },
+    "license": "MIT",
     "licenses": [
         {
             "type": "MIT",
             "url": "https://github.com/joelvaneenwyk/grunt-harp/blob/main/LICENSE-MIT"
         }
     ],
-    "main": "tasks/harp.js",
-    "engines": {
-        "node": ">=10"
-    },
     "scripts": {
         "test": "grunt test --verbose",
-        "build": "grunt --verbose"
+        "build": "grunt --verbose",
+        "lint": "eslint --config eslint.config.mjs \"**\""
     },
     "publishConfig": {
         "access": "public"
@@ -47,8 +50,11 @@
         "@typescript-eslint/eslint-plugin": "^7.7.1",
         "@typescript-eslint/parser": "^7.7.1",
         "coffeescript": "^2.7.0",
+        "eslint": "^8.0.0",
+        "eslint-config-airbnb-base": "^15.0.0",
         "eslint-formatter-stylish": "^8.40.0",
         "eslint-import-resolver-node": "^0.3.9",
+        "eslint-plugin-import": "^2.29.1",
         "globals": "^15.1.0",
         "grunt": "^1.6.1",
         "grunt-cli": "^1.4.3",
@@ -56,16 +62,14 @@
         "grunt-contrib-nodeunit": "^5.0.0",
         "grunt-eslint": "^25.0.0",
         "harp": "^0.46.1",
+        "tap": "^18.7.2",
         "typescript": "^5.4.5"
     },
+    "peerDependencies": {
+        "eslint": "^8.56.0"
+    },
     "directories": {
-        "test": "test"
-    },
-    "devDependencies": {
-        "eslint": "^8.57.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.29.1",
-        "tap": "^18.7.2"
-    },
-    "license": "ISC"
+        "test": "test",
+        "tasks": "tasks"
+    }
 }
