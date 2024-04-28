@@ -2,9 +2,9 @@ name: grunt
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:
@@ -29,14 +29,14 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install Grunt
-        # Force as it fails on Windows given that it's already installed
-        run: npm install -g grunt --force
-
       - name: NPM Install
         run: |
           npm install
 
-      - name: Grunt
+      - name: Build
         run: |
           npm run build
+
+      - name: Lint
+        run: |
+          npm run lint
