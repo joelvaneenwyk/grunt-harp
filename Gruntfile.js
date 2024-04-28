@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         eslint: {
             options: {
-                configFile: ".eslintrc.json"
+                overrideConfigFile: "eslint.config.mjs"
             },
             target: [
                 "Gruntfile.js",

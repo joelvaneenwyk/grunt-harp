@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                     }, 1000);
                 } catch (error) {
                     done();
-                    grunt.log.writeln("Failed to compile site.");
+                    grunt.log.writeln(`Failed to compile site. ${error}`);
                 }
             }
         }
