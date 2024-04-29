@@ -29,11 +29,11 @@ grunt.initConfig({
   harp: {
     server: {
       server: true,
-      source: 'src'
+      source: 'src/'
     },
     dist: {
-      source: 'src',
-      dest: 'build'
+      source: 'src/',
+      dest: 'build/'
     }
   },
 })

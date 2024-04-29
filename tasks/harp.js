@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                 server: false,
                 port: 9000,
                 source: "./",
-                dest: "build"
+                dest: ".build/"
             };
 
             const options = this.options(defaults, this.data);
