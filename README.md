@@ -1,6 +1,8 @@
-# grunt-harp
+# `grunt-harp`
 
-> A grunt task for either running a Harp server, or compile your site using harp.
+> ⚠️ This is a fork of [shovon/grunt-harp: A grunt task for the Harp server.](https://github.com/shovon/grunt-harp) that is only semi-maintained and do **not** recommend relying on this in production.
+
+A [Grunt](http://gruntjs.com/) task for either running a [Harp](https://harpjs.com/) server, or compile your site using [Harp](https://harpjs.com/).
 
 ## Getting Started
 
