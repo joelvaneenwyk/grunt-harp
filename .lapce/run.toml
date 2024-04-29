@@ -1,0 +1,14 @@
+# The run config is used for both run mode and debug mode
+
+[[configs]]
+# the name of this task
+name = "task"
+
+# the type of the debugger. If not set, it can't be debugged but can still be run
+type = "node"
+
+# the program to run
+program = "npm"
+
+# the program arguments, e.g. args = ["arg1", "arg2"], optional
+args = ["install"]

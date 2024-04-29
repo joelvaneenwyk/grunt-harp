@@ -1,7 +1,9 @@
 /*
  * grunt-harp
+ * https://github.com/joelvaneenwyk/grunt-harp
  * https://github.com/shovon/grunt-harp
  *
+ * Copyright (c) 2024 Joel Van Eenwyk
  * Copyright (c) 2013 Salehen Shovon Rahman
  * Licensed under the MIT license.
  */
@@ -24,15 +26,16 @@ module.exports = function (grunt) {
 
         // Before generating any new files, remove any previously-created files.
         clean: [
-            "tmp",
-            "build"
+            "tmp/",
+            ".build/",
+            "build/"
         ],
 
         // Configuration to be run (and then tested).
         harp: {
             options: {
-                source: "./test/example-site",
-                dest: "build"
+                source: "./test/example-site/",
+                dest: ".build/"
             }
         },
 

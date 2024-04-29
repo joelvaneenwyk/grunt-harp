@@ -1,7 +1,9 @@
 /*
  * grunt-harp
+ * https://github.com/joelvaneenwyk/grunt-harp
  * https://github.com/shovon/grunt-harp
  *
+ * Copyright (c) 2024 Joel Van Eenwyk
  * Copyright (c) 2013 Salehen Shovon Rahman
  * Licensed under the MIT license.
  */
@@ -21,7 +23,7 @@ module.exports = function (grunt) {
                 server: false,
                 port: 9000,
                 source: "./",
-                dest: "build"
+                dest: ".build/"
             };
 
             const options = this.options(defaults, this.data);

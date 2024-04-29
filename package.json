@@ -1,5 +1,5 @@
 {
-    "name": "@jvaneenwyk/grunt-harp",
+    "name": "@joelvaneenwyk/grunt-harp",
     "description": "A grunt task for either running a Harp server, or compile your site using harp.",
     "version": "0.23.0",
     "homepage": "https://github.com/joelvaneenwyk/grunt-harp",
@@ -28,6 +28,7 @@
         }
     ],
     "scripts": {
+        "all": "npm run lint && npm run build && npm run test",
         "test": "grunt test --verbose",
         "build": "grunt --verbose",
         "lint": "eslint --config eslint.config.mjs \"**\""
@@ -47,11 +48,7 @@
         "plugin"
     ],
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^7.7.1",
-        "@typescript-eslint/parser": "^7.7.1",
-        "coffeescript": "^2.7.0",
-        "eslint": "^8.0.0",
-        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint": "*",
         "eslint-formatter-stylish": "^8.40.0",
         "eslint-import-resolver-node": "^0.3.9",
         "eslint-plugin-import": "^2.29.1",
@@ -62,7 +59,6 @@
         "grunt-contrib-nodeunit": "^5.0.0",
         "grunt-eslint": "^25.0.0",
         "harp": "^0.46.1",
-        "tap": "^18.7.2",
         "typescript": "^5.4.5"
     },
     "peerDependencies": {

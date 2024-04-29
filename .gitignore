@@ -1,11 +1,17 @@
-node_modules
+#
+# grunt-harp | Ignore list
+#
 
-.pnp.cjs
+node_modules/
+
 .yarn/cache
 .yarn/unplugged
 .yarn/install-state.gz
+.pnp.cjs
+
+.build/
+build/
+tmp/
+*.tgz
 
 npm-debug.log
-build
-tmp
-*.tgz

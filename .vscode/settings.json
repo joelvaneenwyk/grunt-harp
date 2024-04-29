@@ -8,6 +8,11 @@
         "editor.formatOnSave": true,
         "editor.maxTokenizationLineLength": 2500
     },
+    "cSpell.enableFiletypes": [
+        "dockerfile",
+        "ejs",
+        "env"
+    ],
     "cSpell.words": [
         "action",
         "assign",
@@ -28,6 +33,10 @@
         "shovon",
         "submodules"
     ],
+    "eslint.codeAction.showDocumentation": {
+        "enable": true
+    },
+    "eslint.enable": true,
     "eslint.experimental.useFlatConfig": true,
     "eslint.format.enable": true,
     "eslint.nodePath": ".yarn/sdks",
