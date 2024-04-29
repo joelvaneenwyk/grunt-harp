@@ -58,7 +58,11 @@
         "grunt-contrib-clean": "^2.0.1",
         "grunt-contrib-nodeunit": "^5.0.0",
         "grunt-eslint": "^25.0.0",
-        "harp": "^0.46.1"
+        "harp": "^0.46.1",
+        "typescript": "^5.4.5"
+    },
+    "peerDependencies": {
+        "eslint": "^8.56.0"
     },
     "directories": {
         "test": "test",
