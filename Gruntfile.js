@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         harp: {
             options: {
-                source: "./test/example-site/",
+                source: "test/example-site/",
                 dest: ".build/"
             }
         },
