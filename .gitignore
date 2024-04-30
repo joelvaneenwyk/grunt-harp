@@ -15,3 +15,5 @@ tmp/
 *.tgz
 
 npm-debug.log
+debug.log
+tsconfig.tsbuildinfo
