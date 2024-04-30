@@ -1,5 +1,6 @@
 /*
  * grunt-harp
+ *
  * https://github.com/joelvaneenwyk/grunt-harp
  * https://github.com/shovon/grunt-harp
  *
@@ -10,6 +11,10 @@
 
 const gruntHarp = require("./src/grunt_harp_task.js");
 
+/**
+ *
+ * @param {import('grunt')} grunt
+ */
 module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
@@ -34,16 +39,23 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         harp: {
             options: {
-                source: "./test/example-site/",
+                source: "test/example-site/",
                 dest: ".build/"
             }
         },
 
-        // Unit tests.
-        nodeunit: {
-            tests: ["test/*_test.js"]
+        run: {
+            options: {
+                // Task-specific options go here.
+            },
+            your_target: {
+                cmd: 'npm',
+                args: [
+                    'run',
+                    'test'
+                ]
+            }
         }
-
     });
 
     gruntHarp(grunt);
@@ -52,10 +64,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-eslint");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-nodeunit");
+    grunt.loadNpmTasks('grunt-run');
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask("test", ["eslint", "clean", "harp", "nodeunit"]);
+    grunt.registerTask("test", ["eslint", "clean", "harp", "run"]);
 
     // By default, lint and run all tests.
     grunt.registerTask("default", ["clean", "harp", "eslint", "test"]);
