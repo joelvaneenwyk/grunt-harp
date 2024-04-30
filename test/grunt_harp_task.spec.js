@@ -1,15 +1,10 @@
 const grunt = require("grunt");
-const gruntHarp = require("../tasks/harp");
+const gruntHarpTask = require("../src/grunt_harp_task");
 
-exports.harp = {
-    setUp(done) {
-        // setup here if necessary
-        done();
-    },
-    test_compile_harp(test) {
-        const task = gruntHarp(grunt);
-        test.notEqual(task, null);
-        test.equal("function", typeof task.registerTask);
-        test.done();
-    }
-};
+describe('grunt harp task', () => {
+    it('validate', () => {
+        const task = gruntHarpTask(grunt);
+        expect(task).not.toBeNull();
+        expect(typeof task.registerTask).toBe("function");
+    });
+});
