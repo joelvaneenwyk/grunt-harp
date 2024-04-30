@@ -8,7 +8,7 @@
  * Licensed under the MIT license.
  */
 
-const gruntHarp = require("./tasks/harp");
+const gruntHarp = require("./src/grunt_harp_task.js");
 
 module.exports = function (grunt) {
     // Project configuration.
@@ -19,8 +19,8 @@ module.exports = function (grunt) {
             },
             target: [
                 "Gruntfile.js",
-                "tasks/*.js",
-                "test/*.js"
+                "src/*.js",
+                "test/*.spec.js"
             ]
         },
 
