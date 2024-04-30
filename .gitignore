@@ -8,6 +8,7 @@ node_modules/
 .yarn/unplugged
 .yarn/install-state.gz
 .pnp.cjs
+bun.lockb
 
 .build/
 build/
@@ -15,3 +16,5 @@ tmp/
 *.tgz
 
 npm-debug.log
+
+tsconfig.tsbuildinfo
