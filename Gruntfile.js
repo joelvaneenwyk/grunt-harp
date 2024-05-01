@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             options: {
                 // Task-specific options go here.
             },
-            your_target: {
+            harp_test: {
                 cmd: 'npm',
                 args: ['run', 'test']
             }
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['eslint', 'clean', 'harp', 'run']);
+    grunt.registerTask('test', ['run:harp_test', 'clean', 'harp', 'run']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['clean', 'harp', 'eslint', 'test']);

@@ -29,7 +29,7 @@
     ],
     "scripts": {
         "all": "npm run lint && npm run build && npm run test",
-        "test": "grunt test --verbose",
+        "test": "jest --verbose",
         "build": "grunt --verbose",
         "lint": "eslint --debug --config eslint.config.mjs \"**\""
     },
