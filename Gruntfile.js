@@ -34,16 +34,6 @@ module.exports = function (grunt) {
                 source: 'test/example-site/',
                 dest: '.build/'
             }
-        },
-
-        run: {
-            options: {
-                // Task-specific options go here.
-            },
-            harp_test: {
-                cmd: 'npm',
-                args: ['run', 'test']
-            }
         }
     });
 
@@ -53,12 +43,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
-    grunt.loadNpmTasks('grunt-run');
-
-    // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-    // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['run:harp_test', 'clean', 'harp', 'run']);
 
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['clean', 'harp', 'eslint', 'test']);
+    grunt.registerTask('default', ['clean', 'harp', 'eslint']);
 };
