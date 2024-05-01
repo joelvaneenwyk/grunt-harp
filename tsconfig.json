@@ -1,28 +1,27 @@
 {
+    /**
+     * Visit https://aka.ms/tsconfig to read more about this file
+     */
     "include": [
         "src",
         "test/"
     ],
     "compilerOptions": {
-        /* Visit https://aka.ms/tsconfig to read more about this file */
-        /* Projects */
         "incremental": true,
         "target": "es2016",
         "module": "NodeNext",
-        "rootDir": "./", /* Specify the root folder within your source files. */
+        "rootDir": "./",
         "moduleResolution": "NodeNext",
-        "allowJs": true, /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+        "allowJs": true,
         "checkJs": true,
         "noEmit": true,
         "importHelpers": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        /* Type Checking */
         "strict": true,
-        // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-        "strictNullChecks": true, /* When type checking, take into account 'null' and 'undefined'. */
-        "alwaysStrict": true, /* Ensure 'use strict' is always emitted. */
-        // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-        "skipLibCheck": true /* Skip type checking all .d.ts files. */
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "alwaysStrict": true,
+        "skipLibCheck": true
     }
 }
