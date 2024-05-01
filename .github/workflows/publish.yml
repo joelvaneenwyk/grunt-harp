@@ -41,7 +41,7 @@ jobs:
       - uses: JS-DevTools/npm-publish@v3
         with:
           access: public
-          registry: "https://npm.pkg.github.com"
+          registry: 'https://npm.pkg.github.com'
           token: ${{ github.token }}
 
       - name: Upload Logs

@@ -18,8 +18,8 @@ export default [
                 ...globals.browser,
                 ...globals.commonjs,
                 ...globals.jquery,
-                ...globals.node,
-            },
+                ...globals.node
+            }
         },
         rules: {
             'func-names': 'off',
@@ -28,8 +28,8 @@ export default [
             // override default options for rules from base configurations
             'no-cond-assign': ['error', 'always'],
             // disable rules from base configurations
-            'no-console': 'off',
-        },
+            'no-console': 'off'
+        }
     },
     {
         files: ['*.js'],
@@ -40,8 +40,8 @@ export default [
                 ...globals.browser,
                 ...globals.commonjs,
                 ...globals.jquery,
-                ...globals.node,
-            },
+                ...globals.node
+            }
         },
         rules: {
             'func-names': 'off',
@@ -50,8 +50,8 @@ export default [
             // override default options for rules from base configurations
             'no-cond-assign': ['error', 'always'],
             // disable rules from base configurations
-            'no-console': 'off',
-        },
+            'no-console': 'off'
+        }
     },
     // Test files
     {
@@ -65,7 +65,7 @@ export default [
                 ...globals.jquery,
                 ...globals.node,
                 ...globals.jest
-            },
+            }
         },
         plugins: {
             jest

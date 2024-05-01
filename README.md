@@ -28,17 +28,17 @@ In your project's Gruntfile, add a section named `harp` to the data object passe
 
 ```js
 grunt.initConfig({
-  harp: {
-    server: {
-      server: true,
-      source: 'src/'
-    },
-    dist: {
-      source: 'src/',
-      dest: 'build/'
+    harp: {
+        server: {
+            server: true,
+            source: 'src/'
+        },
+        dist: {
+            source: 'src/',
+            dest: 'build/'
+        }
     }
-  },
-})
+});
 ```
 
 ### Options
@@ -77,30 +77,30 @@ The directory of which to store the generated site.
 
 ```js
 grunt.initConfig({
-  harp: {
-    server: {
-      server: true
-    },
-    dist: {}
-  },
-})
+    harp: {
+        server: {
+            server: true
+        },
+        dist: {}
+    }
+});
 ```
 
 #### Custom Options
 
 ```js
 grunt.initConfig({
-  harp: {
-    server: {
-      server: true,
-      source: 'src'
-    },
-    dist: {
-      source: 'src',
-      dest: 'build'
+    harp: {
+        server: {
+            server: true,
+            source: 'src'
+        },
+        dist: {
+            source: 'src',
+            dest: 'build'
+        }
     }
-  },
-})
+});
 ```
 
 ## Contributing

@@ -8,10 +8,10 @@
  * Licensed under the MIT license.
  */
 
-const grunt = require("grunt");
+const grunt = require('grunt');
 // @ts-ignore
-const harp = require("harp");
-const path = require("path");
+const harp = require('harp');
+const path = require('path');
 
 /**
  * @param {grunt.task.ITask} instance
@@ -24,8 +24,8 @@ function task(instance) {
     const defaults = {
         server: false,
         port: 9000,
-        source: "./",
-        dest: ".build/"
+        source: './',
+        dest: '.build/'
     };
 
     // @ts-ignore - type definitions do not have 'this.data' so we ignore the warning.
@@ -35,7 +35,7 @@ function task(instance) {
 
     if (options.server) {
         harp.server(source, { port: options.port }, function () {
-            console.log("Harp server running on port %d", options.port);
+            console.log('Harp server running on port %d', options.port);
         });
         done();
     } else {
@@ -48,13 +48,13 @@ function task(instance) {
                     done(err);
                 }
 
-                grunt.log.writeln("Site successfully compiled!");
+                grunt.log.writeln('Site successfully compiled!');
 
                 done();
             });
 
             setTimeout(function () {
-                grunt.log.writeln("All done!");
+                grunt.log.writeln('All done!');
                 done();
             }, 1000);
         } catch (error) {
@@ -72,8 +72,8 @@ function task(instance) {
 module.exports = function main(gruntOverride = null) {
     let gruntInstance = gruntOverride || grunt;
     gruntInstance.registerTask(
-        "harp",
-        "A grunt task for either running a Harp server, or compile your site using harp.",
+        'harp',
+        'A grunt task for either running a Harp server, or compile your site using harp.',
         task
     );
     return gruntInstance;

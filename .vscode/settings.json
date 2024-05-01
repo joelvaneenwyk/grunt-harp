@@ -8,11 +8,7 @@
         "editor.formatOnSave": true,
         "editor.maxTokenizationLineLength": 2500
     },
-    "cSpell.enableFiletypes": [
-        "dockerfile",
-        "ejs",
-        "env"
-    ],
+    "cSpell.enableFiletypes": ["dockerfile", "ejs", "env"],
     "cSpell.words": [
         "action",
         "assign",

@@ -20,9 +20,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
         eslint: {
             options: {
-                overrideConfigFile: 'eslint.config.mjs',
+                overrideConfigFile: 'eslint.config.mjs'
             },
-            target: ['Gruntfile.js', 'src/*.js', 'test/*.spec.js'],
+            target: ['Gruntfile.js', 'src/*.js', 'test/*.spec.js']
         },
 
         // Before generating any new files, remove any previously-created files.
@@ -32,8 +32,8 @@ module.exports = function (grunt) {
         harp: {
             options: {
                 source: 'test/example-site/',
-                dest: '.build/',
-            },
+                dest: '.build/'
+            }
         },
 
         run: {
@@ -42,9 +42,9 @@ module.exports = function (grunt) {
             },
             your_target: {
                 cmd: 'npm',
-                args: ['run', 'test'],
-            },
-        },
+                args: ['run', 'test']
+            }
+        }
     });
 
     gruntHarp(grunt);
