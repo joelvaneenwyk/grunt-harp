@@ -60,7 +60,7 @@
     "devDependencies": {
         "@types/grunt": "^0.4.31",
         "@types/jest": "^29.5.12",
-        "@types/node": "^20.12.7",
+        "@types/node": "^20.12.12",
         "eslint": "^9.1.1",
         "eslint-config-prettier": "^9.1.0",
         "globals": "^15.1.0",
