@@ -13,9 +13,12 @@ bun.lockb
 .build/
 build/
 tmp/
+.lapce/
 *.tgz
 
 npm-debug.log
 debug.log
 
 tsconfig.tsbuildinfo
+
+/.git/
